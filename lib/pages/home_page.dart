@@ -12,6 +12,45 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: SCAFFOLD_BG_COLOR,
+      bottomNavigationBar: SafeArea(
+        child: Material(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(32),
+            topRight: Radius.circular(32),
+          ),
+          color: Colors.white,
+          child: Container(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: MAIN_BLACK_COLOR.withOpacity(.2),
+                  ),
+                  padding: EdgeInsets.all(8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        LineAwesomeIcons.home,
+                        size: 20,
+                      ),
+                      SizedBox(width: 4),
+                      Text('Home')
+                    ],
+                  ),
+                ),
+                Icon(Icons.home),
+                Icon(Icons.home),
+                Icon(Icons.home),
+              ],
+            ),
+          ),
+        ),
+      ),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: SCAFFOLD_BG_COLOR,
@@ -120,7 +159,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
                     child: Column(
